@@ -1,0 +1,280 @@
+{
+	"info": {
+		"_postman_id": "6db0e766-394f-47bf-bdf5-3df486572240",
+		"name": "Spring-Cloud",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Zuul-server",
+			"item": [
+				{
+					"name": "Get Token",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "abc123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "frontendapp",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "robinare",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "abc123",
+									"type": "text"
+								},
+								{
+									"key": "grant_type",
+									"value": "password",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{hostPort}}/security/oauth/token",
+							"host": [
+								"{{hostPort}}"
+							],
+							"path": [
+								"security",
+								"oauth",
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "One Usuario",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGVsbGlkb3MiOiJBcmVsbGFubyIsInVzZXJfbmFtZSI6ImFtaXJhcmUiLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNTk4NjU3MjU5LCJub21icmUiOiJBbWlyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9VU0VSIl0sImp0aSI6IjI0YzYzYTUxLTEzOGMtNGZhYS1hZjc0LWQ3YmIxNTgzM2E5OCIsImVtYWlsIjoiYW1pci5hcmVAZ21haWwuY29tIiwiY2xpZW50X2lkIjoiZnJvbnRlbmRhcHAifQ.ccwrYmRm1VUE1_TbSRJW1zqLBaH4KBGO5k_30avlAvY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{hostPort}}/usuarios/findbyusername?username=robinare",
+							"host": [
+								"{{hostPort}}"
+							],
+							"path": [
+								"usuarios",
+								"findbyusername"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "robinare"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All Usuarios",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGVsbGlkb3MiOiJBcmVsbGFubyIsInVzZXJfbmFtZSI6InJvYmluYXJlIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl0sImV4cCI6MTU5ODY1NDMyOCwibm9tYnJlIjoiUm9iaW4iLCJhdXRob3JpdGllcyI6WyJST0xFX0FETUlOIiwiUk9MRV9VU0VSIl0sImp0aSI6ImJlYzgxNzYxLTg1ODMtNDVjZS1hYmNjLTlmMjQ0MGY5OWFjMiIsImVtYWlsIjoicm9iaW5hcmVAZ21haWwuY29tIiwiY2xpZW50X2lkIjoiZnJvbnRlbmRhcHAifQ.eENSYyfkpZKayeSi7SWqlUOwYAJIHF-80ZvFOCJjzIY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{hostPort}}/usuarios",
+							"host": [
+								"{{hostPort}}"
+							],
+							"path": [
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Usuario",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGVsbGlkb3MiOiJBcmVsbGFubyIsInVzZXJfbmFtZSI6ImFtaXJhcmUiLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNTk4NjU3MjU5LCJub21icmUiOiJBbWlyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9VU0VSIl0sImp0aSI6IjI0YzYzYTUxLTEzOGMtNGZhYS1hZjc0LWQ3YmIxNTgzM2E5OCIsImVtYWlsIjoiYW1pci5hcmVAZ21haWwuY29tIiwiY2xpZW50X2lkIjoiZnJvbnRlbmRhcHAifQ.ccwrYmRm1VUE1_TbSRJW1zqLBaH4KBGO5k_30avlAvY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\": \"amirare\",\r\n    \"nombre\": \"Amir\",\r\n    \"apellidos\": \"Arellano\",\r\n    \"email\": \"amirare@gmail.com\",\r\n    \"userPassword\": \"abc123abc\",\r\n    \"birthDate\": \"1988-11-19\",\r\n    \"roles\": [\r\n        {\r\n            \"roleName\": \"ROLE_USER\",\r\n            \"id\": 2\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{hostPort}}/usuarios",
+							"host": [
+								"{{hostPort}}"
+							],
+							"path": [
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Usuario",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGVsbGlkb3MiOiJBcmVsbGFubyIsInVzZXJfbmFtZSI6InJvYmluYXJlIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl0sImV4cCI6MTU5ODY1NDMyOCwibm9tYnJlIjoiUm9iaW4iLCJhdXRob3JpdGllcyI6WyJST0xFX0FETUlOIiwiUk9MRV9VU0VSIl0sImp0aSI6ImJlYzgxNzYxLTg1ODMtNDVjZS1hYmNjLTlmMjQ0MGY5OWFjMiIsImVtYWlsIjoicm9iaW5hcmVAZ21haWwuY29tIiwiY2xpZW50X2lkIjoiZnJvbnRlbmRhcHAifQ.eENSYyfkpZKayeSi7SWqlUOwYAJIHF-80ZvFOCJjzIY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\": \"amirare\",\r\n    \"nombre\": \"Amir\",\r\n    \"apellidos\": \"Arellano\",\r\n    \"email\": \"amir.are@gmail.com\",\r\n    \"userPassword\": \"abc123\",\r\n    \"birthDate\": \"1988-11-19\",\r\n    \"enabled\": true,\r\n    \"roles\": [\r\n        {\r\n            \"roleName\": \"ROLE_USER\",\r\n            \"id\": 2\r\n        }\r\n    ],\r\n    \"id\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{hostPort}}/usuarios",
+							"host": [
+								"{{hostPort}}"
+							],
+							"path": [
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Usuario",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGVsbGlkb3MiOiJBcmVsbGFubyIsInVzZXJfbmFtZSI6InJvYmluYXJlIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl0sImV4cCI6MTU5ODY1NDMyOCwibm9tYnJlIjoiUm9iaW4iLCJhdXRob3JpdGllcyI6WyJST0xFX0FETUlOIiwiUk9MRV9VU0VSIl0sImp0aSI6ImJlYzgxNzYxLTg1ODMtNDVjZS1hYmNjLTlmMjQ0MGY5OWFjMiIsImVtYWlsIjoicm9iaW5hcmVAZ21haWwuY29tIiwiY2xpZW50X2lkIjoiZnJvbnRlbmRhcHAifQ.eENSYyfkpZKayeSi7SWqlUOwYAJIHF-80ZvFOCJjzIY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\": \"amir.are\",\r\n    \"nombre\": \"Amir\",\r\n    \"apellidos\": \"Arellano\",\r\n    \"email\": \"amir.are@gmail.com\",\r\n    \"userPassword\": \"abc123\",\r\n    \"birthDate\": \"1988-11-19\",\r\n    \"enabled\": true,\r\n    \"roles\": [\r\n        {\r\n            \"roleName\": \"ROLE_USER\",\r\n            \"id\": 2\r\n        }\r\n    ],\r\n    \"id\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{hostPort}}/usuarios/2",
+							"host": [
+								"{{hostPort}}"
+							],
+							"path": [
+								"usuarios",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "0d307809-bfb2-4fb7-8112-07a55db824ca",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "a896b219-7992-4ece-981b-396a16eeea61",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "ed225cc4-22b0-44d6-aee8-e9826a2632f6",
+			"key": "hostPort",
+			"value": "localhost:8080/api"
+		},
+		{
+			"id": "9746f97e-b679-4513-8697-8a86ca704024",
+			"key": "localHost",
+			"value": "localhost:8081"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
