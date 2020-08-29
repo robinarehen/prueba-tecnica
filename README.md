@@ -97,18 +97,18 @@ mvn spring.boot::run
 # Pruebas con Postman
 Los servicios se pueden probar mediante el aplicativo **Postman**, para lo cual se deja una colección de nombre ` Spring-Cloud.postman_collection.json` la cual se debe importar.
 
-![Image](Postman.png)
+![Image](Postman.PNG)
 
 ## Obtener Token
 El primer paso es generar un **Token** para poder realizar las operaciones de consulta, creación, modificación y eliminación de usuarios.
 Se debe abrir el endpoint de nombre `Get Token`, se dejan los mismo datos que se muestran en la imagen.
 
-![Image](Get-Token.png)
+![Image](Get-Token.PNG)
 
 ## Consultar Usuarios
 Para este paso se debe copiar el valor del atributo del `access_toke` de la respuesta del paso anterior, se debe pegar como se muestra en la siguiente imagen y se lanza la petición con el botón **SEND** al final de la url.
 
-![Image](Pegar-Token.png)
+![Image](Pegar-Token.PNG)
 
 # H2 Database
 Se utiliza `H2` como base de datos embebida, a la cual se puede acceder desde el siguiente link [Test database](http://localhost:8081/h2-console/). <br>
