@@ -13,7 +13,12 @@ El siguiente proyecto cuenta con los pasos a seguir para ejecutar la prueba téc
 2. Se debe tener instalado y configurado **Maven 3.6.3 o Superior**, con este aplicativo se podra compilar y ejecuatr los proyectos `Spring Boot`.
 <br><br>
 
-3. Se debe tener instalado **NodejJS**
+3. Se debe tener instalado **Nodejs 12.18.x LTS**, con este aplicativo se prodra configurar el proyecto de angular.
+
+4. Una vez instalado **Nodejs** se debe realizar la instalación de angular con el siguiente comando.
+```
+npm install -g @angular/cli
+```
 
 ## Si no desea Instalar GIT
 En caso que no se desee instalar **GIT** se pueden descargar los proyectos desde los siguientes links, de los cuales se debe descargar el **TAG** con la etiqueta **V2**.
@@ -71,7 +76,7 @@ mvn clean install
 mvn spring.boot::run
 ```
 
-2. Se inicia el servicio `springboot-servicio-usuarios` en una nueva terminar, debe estar ejecutandose el proyecto `springboot-servicio-eureka-server`.
+2. Se inicia el servicio `springboot-servicio-usuarios` en una nueva terminal, debe estar ejecutandose el proyecto `springboot-servicio-eureka-server`.
 ```
 cd springboot-servicio-usuarios/
 
@@ -80,7 +85,7 @@ mvn clean install
 mvn spring.boot::run
 ```
 
-3. Se inicia el servicio `springboot-servicio-oauth` en una nueva terminar, debe estar ejecutandose el proyecto `springboot-servicio-eureka-server`.
+3. Se inicia el servicio `springboot-servicio-oauth` en una nueva terminal, debe estar ejecutandose el proyecto `springboot-servicio-eureka-server`.
 ```
 cd springboot-servicio-oauth/
 
@@ -89,13 +94,22 @@ mvn clean install
 mvn spring.boot::run
 ```
 
-4. Se inicia el servicio `springboot-servicio-zuul-server` en una nueva terminar, debe estar ejecutandose el proyecto `springboot-servicio-eureka-server`.
+4. Se inicia el servicio `springboot-servicio-zuul-server` en una nueva terminal, debe estar ejecutandose el proyecto `springboot-servicio-eureka-server`.
 ```
 cd springboot-servicio-zuul-server/
 
 mvn clean install
 
 mvn spring.boot::run
+```
+
+5. Se inicia el frontend `springboot-servicio-frontend` en una nueva terminal.
+```
+cd springboot-servicio-frontend/
+
+npm install
+
+ng serve -o
 ```
 
 # Pruebas con Postman
