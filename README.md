@@ -13,6 +13,8 @@ El siguiente proyecto cuenta con los pasos a seguir para ejecutar la prueba téc
 2. Se debe tener instalado y configurado **Maven 3.6.3 o Superior**, con este aplicativo se podra compilar y ejecuatr los proyectos `Spring Boot`.
 <br><br>
 
+3. Se debe tener instalado **NodejJS**
+
 ## Si no desea Instalar GIT
 En caso que no se desee instalar **GIT** se pueden descargar los proyectos desde los siguientes links, de los cuales se debe descargar el **TAG** con la etiqueta **V2**.
 Al realizar este paso se debe omitir el paso **Descargar proyectos**
@@ -41,7 +43,7 @@ La prueba cuenta con un total de 5 proyectos que trabajar de forma coordinada.
 
 4. `springboot-servicio-zuul-server`, proyecto encargado de exponer los servicios antes los clientes que pueden ser aplicativos web, móviles y otros servicios, etc.
 
-5. `Frontend Angular`, Pendiente
+5. `springboot-servicio-frontend`, proyecto creado en **Angular** en el cual se pueden probar los servicios.
 
 ```
 git clone https://github.com/robinarehen/springboot-servicio-eureka-server.git
@@ -51,6 +53,8 @@ git clone https://github.com/robinarehen/springboot-servicio-usuarios.git
 git clone https://github.com/robinarehen/springboot-servicio-oauth.git
 
 git clone https://github.com/robinarehen/springboot-servicio-zuul-server.git
+
+git clone https://github.com/robinarehen/springboot-servicio-frontend.git
 ```
 
 
