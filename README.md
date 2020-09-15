@@ -32,6 +32,8 @@ Al realizar este paso se debe omitir el paso **Descargar proyectos**
 
 4. `springboot-servicio-zuul-server`, [Link Descarga](https://github.com/robinarehen/springboot-servicio-zuul-server/tags).
 
+5. `springboot-servicio-frontend`, [Link Descarga](https://github.com/robinarehen/springboot-servicio-frontend/tags) descargar el **TAG** con la etiqueta **V1**.
+
 Al finalizar las descargas, se deben descomprimir los proyectos y seguir con el paso **Ejecutar Proyectos**
 
 # Pasos para Ejecutar los proyectos
