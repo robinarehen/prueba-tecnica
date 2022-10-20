@@ -1,0 +1,51 @@
+<app-header headerLogin="true"></app-header>
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-sm-12 col-md-6 offset-md-3 mt-3">
+            <mat-card>
+                <mat-card-header>
+                    <div class="text-center w-100">
+                        <mat-card-title>Start Session</mat-card-title>
+                    </div>
+                </mat-card-header>
+                <mat-card-content>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-9 offset-md-2 mt-3">
+                            <mat-form-field class="w-100">
+                                <mat-label>User Name</mat-label>
+                                <input matInput type="text" #inputUserName value="">
+                                <button *ngIf="inputUserName.value" mat-button matSuffix mat-icon-button
+                                    (click)="inputUserName.value = ''">
+                                    <mat-icon>close</mat-icon>
+                                </button>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-sm-12 col-md-9 offset-md-2 mt-3">
+                            <mat-form-field class="w-100">
+                                <mat-label>Password</mat-label>
+                                <input matInput type="password" #inputPassword value="">
+                                <button *ngIf="inputPassword.value" mat-button matSuffix mat-icon-button
+                                    (click)="inputPassword.value = ''">
+                                    <mat-icon>close</mat-icon>
+                                </button>
+                            </mat-form-field>
+                        </div>
+                        <div *ngIf="loading" class="col-sm-12 col-md-9 offset-md-2 mt-3">
+                            <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+                        </div>
+                        <div class="col-sm-12 col-md-6 offset-md-2 mt-3">
+                            <button (click)="login(inputUserName, inputPassword)" mat-raised-button color="primary"
+                                [disabled]="!inputUserName.value || !inputPassword.value || loading">
+                                Login
+                            </button>
+                        </div>
+                    </div>
+                </mat-card-content>
+                <mat-card-actions>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+    </div>
+</div>

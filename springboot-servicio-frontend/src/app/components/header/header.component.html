@@ -1,0 +1,40 @@
+<header *ngIf="!headerLogin" class="bgc-primary">
+    <div class="container">
+        <mat-toolbar color="primary">
+
+            <span>Desarrollador Java</span>
+
+            <span class="item-spacer"></span>
+
+            <ul>
+                <li routerLinkActive="active">
+                    <a routerLink="/pages/home" class="item">
+                        <mat-icon class="item-icon">home</mat-icon> Home
+                    </a>
+                </li>
+                <li routerLinkActive="active">
+                    <a routerLink="/pages/users" class="item">
+                        <mat-icon class="item-icon">groups</mat-icon> Users
+                    </a>
+                </li>
+                <li routerLinkActive="active">
+                    <a routerLink="/pages/login" class="item">
+                        <mat-icon class="item-icon">lock</mat-icon> Logout
+                    </a>
+                </li>
+            </ul>
+        </mat-toolbar>
+    </div>
+</header>
+
+<header *ngIf="headerLogin" class="bgc-primary">
+    <div class="container">
+        <mat-toolbar color="primary">
+
+            <div class="text-center w-100">
+                <span>Desarrollador Java</span>
+            </div>
+
+        </mat-toolbar>
+    </div>
+</header>
